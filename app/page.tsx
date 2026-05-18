@@ -2,6 +2,7 @@ import Image from "next/image";
 import HeaderButton from "@/components/header/HeaderButton";
 import HeaderWallet from "@/components/header/HeaderWallet";
 import CuteButton from "@/components/UI/CuteButton";
+import RoomSection from "@/components/UI/RoomSection";
 
 export default function Home() {
   return (
@@ -46,10 +47,10 @@ export default function Home() {
       </header>
 
       {/* Hero ig */}
-      <main className="h-full bg-[#FDFBF7] border-b-4 border-black">
+      <main className="h-full bg-[#FDFBF7] border-b-4 border-black pl-[101px]">
 
         {/* Main */}
-        <div className="flex flex-row justify-center gap-[150px] pl-[101px] pr-[38px] pt-[40px]">
+        <div className="flex flex-row justify-center gap-[150px]  pr-[38px] pt-[40px]">
 
           {/* Banger title */}
           <div className="pt-[89px]">
@@ -57,10 +58,10 @@ export default function Home() {
               <h2 className="text-black text-6xl font-fredoka font-bold leading-tight relative inline-block mb-3">
                 Drop a word,
                 <br />
-                Watch it <span className="text-blue-500">Ripple.
+                Watch it <span className="text-[#3175EA]">Ripple.
                 </span>
                 <Image
-                  src="/icons/underline1.svg"
+                  src="/icons/underlineBlue.svg"
                   alt="underline"
                   width={230}
                   height={50}
@@ -102,7 +103,7 @@ export default function Home() {
                   width={1}
                   height={1}
                   className="w-5 h-5 mx-[8px]"
-                  />
+                />
                 <p className="font-providenceSans text-black text-[17px]">1045 Rippies onboard</p>
               </div>
               <div className="flex flex-row">
@@ -113,13 +114,13 @@ export default function Home() {
                   height={1}
                   className="w-5 h-5 mx-[8px]"
                 />
-                <p className="font-providenceSans text-black text-[17px]">4.2m Riplens earned by <br/>all the rippies</p>
+                <p className="font-providenceSans text-black text-[17px]">4.2m Riplens earned by <br />all the rippies</p>
               </div>
             </div>
           </div>
 
           {/* Splash art */}
-          <div className="">
+          <div>
             <Image
               src="/splash_arts/placeholder_splash_art.svg"
               alt="Splash Art"
@@ -132,22 +133,139 @@ export default function Home() {
 
         {/* Rooms showcase */}
         <div>
-          Rooms
+
+          <div className="relative">
+            <h1 className="font-fredoka font-bold text-black text-5xl">Rooms to join</h1>
+            <p className="font-providenceSans font-bold text-[#FF2A38] text-2xl">ends in 2 days</p>
+            <Image
+              src="/icons/underlineRed.svg"
+              alt="underline"
+              width={230}
+              height={50}
+              className="w-[220px] absolute left-0 top-full"
+            />
+          </div>
 
           {/* Vocabulary room */}
-          <div>
-            Vocabulary rooms
+          <div className="overflow-hidden pr-[101px]">
+
+            {/* Title */}
+            <div className="flex flex-col justify-center items-center mt-10">
+              <Image
+                src="/icons/underlineBlueThin.svg"
+                alt="underline"
+                width={230}
+                height={50}
+                className="w-100"
+              /> 
+              <h1 className="font-fredoka font-semibold text-[#3175EA] text-4xl">Vocabulary Rooms</h1>
+              <p className="font-providenceSans font-bold text-[#404040] text-center text-xl">Use your vocabulary and submit words starting with the ending letter <br />
+                of the last word submitted Rarer and Longer the words, more it will score</p>
+            </div>
+
+            {/* Rooms */}
+            <div className="mt-10 flex flex-row gap-7
+                            overflow-x-auto pb-4 pr-3">
+              <RoomSection
+                roomName={"Cozy Cottage"}
+                roomDesc={"Anything goes"}
+                roomLastWord={"Rhetorical"}
+                roomUsers={"51"}
+                roomColor={"#FDA4AF"}
+              />
+              <RoomSection
+                roomName={"Verbal Voyage"}
+                roomDesc={"Verbs only"}
+                roomLastWord={"Hugging"}
+                roomUsers={"51"}
+                roomColor={"#7DD3FC"}
+              />
+              <RoomSection
+                roomName={"Missing Keys"}
+                roomDesc={"Letters K, E, Y and S are banned"}
+                roomLastWord={"Tailoring"}
+                roomUsers={"51"}
+                roomColor={"#6EE7B7"}
+              />
+              <RoomSection
+                roomName={"Cozy Cottage"}
+                roomDesc={"Anything goes"}
+                roomLastWord={"Rhetorical"}
+                roomUsers={"51"}
+                roomColor={"#FDA4AF"}
+              />
+              <RoomSection
+                roomName={"Verbal Voyage"}
+                roomDesc={"Verbs only"}
+                roomLastWord={"Hugging"}
+                roomUsers={"51"}
+                roomColor={"#7DD3FC"}
+              />
+            </div>
           </div>
 
           {/* Story room */}
-          <div>
-            Story rooms
-          </div>
-        </div>
+          <div className="overflow-hidden pr-[101px]">
 
-        {/* Inbox ki bheekh maangna */}
-        <div>
-          Subscribe to inbox notifications
+            {/* Title */}
+            <div className="flex flex-col justify-center items-center mt-10">
+              <Image
+                src="/icons/underlineBlueThin.svg"
+                alt="underline"
+                width={230}
+                height={50}
+                className="w-100"
+              />
+              <h1 className="font-fredoka font-semibold text-[#3175EA] text-4xl">Story Rooms</h1>
+              <p className="font-providenceSans font-bold text-[#404040] text-center text-xl">Submit sentences with relation to the previously submitted sentences <br />
+                to compile a story formed with strangers</p>
+            </div>
+
+            {/* Rooms */}
+            <div className="mt-10 flex flex-row gap-7
+                            overflow-x-auto pb-4 pr-3">
+              <RoomSection
+                roomName={"Soupy Stories"}
+                roomDesc={"Horror/Comedy"}
+                roomLastWord={"then Leon F Kennedy arrived with a chainsaw"}
+                roomUsers={"51"}
+                roomColor={"#FCD34D"}
+              />
+              <RoomSection
+                roomName={"Autopilot Anarchy"}
+                roomDesc={"most chaotic story ever"}
+                roomLastWord={"because he was not rizzy enough to do that"}
+                roomUsers={"51"}
+                roomColor={"#C4B5FD"}
+              />
+              <RoomSection
+                roomName={"Bedwars Bungus"}
+                roomDesc={"Most uncomfortable bedtime story ever"}
+                roomLastWord={"what should we do now?"}
+                roomUsers={"51"}
+                roomColor={"#F99763"}
+              />
+              <RoomSection
+                roomName={"Autopilot Anarchy"}
+                roomDesc={"most chaotic story ever"}
+                roomLastWord={"because he was not rizzy enough to do that"}
+                roomUsers={"51"}
+                roomColor={"#C4B5FD"}
+              />
+              <RoomSection
+                roomName={"Bedwars Bungus"}
+                roomDesc={"Most uncomfortable bedtime story ever"}
+                roomLastWord={"what should we do now?"}
+                roomUsers={"51"}
+                roomColor={"#F99763"}
+              /> 
+            </div>
+          </div>
+
+          {/* Inbox subscription ki bheekh */}
+          <div>
+            Subscribe to inbox notifications
+          </div>
         </div>
       </main>
 

@@ -3,6 +3,7 @@ import HeaderButton from "@/components/header/HeaderButton";
 import HeaderWallet from "@/components/header/HeaderWallet";
 import CuteButton from "@/components/UI/CuteButton";
 import RoomSection from "@/components/UI/RoomSection";
+import Footer from "@/components/UI/Footer";
 
 export default function Home() {
   return (
@@ -302,15 +303,7 @@ export default function Home() {
         </div>
       </main>
 
-      {/* No one sees these stuff but its still very important */}
-      <footer className="bg-[#FDFBF7]">
-        <div>
-          footer1
-        </div>
-        <div>
-          footer2
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
